@@ -962,8 +962,15 @@ export function evaluateRow(plan: RowPlan, r: InspectResult | undefined, english
   put(checkUrl(c));
   put(checkReportId(c));
   put(checkReportTitle(c));
-  const fq = checkFaq(c);
-  put(fq.summary, fq.details);
+  // FAQs are out of scope: they are not in the Description HTML, so they are not cross-checked.
+  // Change CHECK_FAQ to true to switch the FAQ check back on.
+  const CHECK_FAQ = false;
+  if (CHECK_FAQ) {
+    const fq = checkFaq(c);
+    put(fq.summary, fq.details);
+  } else {
+    summary['FAQ'] = F('FAQ', 'FAQ questions & answers', '', '', 'N/A', { note: 'Not checked – FAQs are out of scope' });
+  }
   const lk = checkLinks(c);
   put(lk.summary, lk.details);
   const lg = checkLanguage(c, ct.cross);
