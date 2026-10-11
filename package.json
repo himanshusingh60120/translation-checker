@@ -1,0 +1,28 @@
+{
+  "name": "kings-translation-verifier",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cheerio": "1.0.0-rc.12",
+    "exceljs": "^4.4.0",
+    "jszip": "^3.10.1",
+    "next": "^14.2.25",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}

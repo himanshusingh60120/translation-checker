@@ -1,0 +1,63 @@
+:root {
+  --navy: #1f3864;
+  --line: #e3e6ee;
+  --muted: #6b7280;
+  --bg: #f6f7fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: #1f2937; font: 14px/1.45 system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+main { max-width: 1500px; margin: 0 auto; padding: 24px; }
+header h1 { margin: 0 0 4px; font-size: 22px; color: var(--navy); }
+h2 { font-size: 17px; margin: 0 0 10px; color: var(--navy); }
+h3 { font-size: 15px; margin: 22px 0 8px; }
+code { background: #eef1f7; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+a { color: #1d4ed8; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; margin: 16px 0; }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.button, button { display: inline-block; background: var(--navy); color: #fff; border: 0; border-radius: 7px; padding: 9px 16px; font-weight: 600; cursor: pointer; font-size: 14px; }
+.button.secondary, button.secondary { background: #e8ecf5; color: var(--navy); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+input[type='text'], input[type='number'], input:not([type]), select, textarea { border: 1px solid #cfd5e2; border-radius: 6px; padding: 7px 9px; font: inherit; }
+.settings { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px 20px; }
+.settings label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: 13px; }
+.settings label.check { flex-direction: row; align-items: center; font-weight: 500; gap: 8px; }
+.progress { height: 10px; background: #e8ecf5; border-radius: 6px; overflow: hidden; margin: 12px 0 6px; }
+.progress > div { height: 100%; background: var(--navy); transition: width 0.3s; }
+.log { background: #0f172a; color: #cbd5e1; font: 12px/1.5 ui-monospace, Menlo, Consolas, monospace; padding: 10px; border-radius: 8px; max-height: 180px; overflow: auto; white-space: pre-wrap; }
+.error { background: #fde8e8; color: #9b1c1c; padding: 10px 12px; border-radius: 8px; margin: 10px 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+table.grid th, table.grid td { border-bottom: 1px solid var(--line); padding: 6px 7px; text-align: left; vertical-align: top; }
+table.grid th { background: #f1f4fa; font-size: 12px; position: sticky; top: 0; white-space: nowrap; }
+table.inner { margin-top: 8px; font-size: 12px; }
+table.inner th, table.inner td { border: 1px solid var(--line); padding: 5px 6px; vertical-align: top; text-align: left; }
+table.inner th { background: #f6f8fc; }
+td.txt { max-width: 420px; white-space: pre-wrap; word-break: break-word; }
+td.url { max-width: 340px; word-break: break-all; font-size: 12px; }
+.nowrap { white-space: nowrap; }
+tr.click, td.click { cursor: pointer; }
+tr.click:hover { background: #f8fafe; }
+.details { padding: 8px 4px 14px; }
+.badge { display: inline-block; padding: 1px 7px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.b-PASS { background: #c6efce; color: #006100; }
+.b-WARNING { background: #ffeb9c; color: #9c5700; }
+.b-FAIL { background: #ffc7ce; color: #9c0006; }
+.b-NOTFOUND { background: #f8cbad; color: #843c0c; }
+.b-NA { background: #ededed; color: #595959; }
+.cards { display: flex; gap: 12px; flex-wrap: wrap; margin: 6px 0 4px; }
+.stat { background: #f4f6fb; border-radius: 8px; padding: 10px 16px; min-width: 150px; }
+.stat b { display: block; font-size: 22px; }
+.stat span { color: var(--muted); font-size: 12px; }
+.stat.ok b { color: #006100; }
+.stat.warn b { color: #9c5700; }
+.stat.bad b { color: #9c0006; }
+.diff del { background: #ffd6d6; text-decoration: line-through; }
+.diff ins { background: #d5f5d5; text-decoration: none; }
+.chips { display: flex; gap: 4px; flex-wrap: wrap; }
+.chip { font-size: 11px; padding: 1px 6px; border-radius: 4px; background: #e8ecf5; }
+.chip.bad { background: #ffc7ce; color: #9c0006; }
+.chip.warn { background: #ffeb9c; color: #9c5700; }
+.filters input, .filters select { min-width: 160px; }
+details summary { cursor: pointer; font-weight: 600; margin: 8px 0; }
